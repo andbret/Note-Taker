@@ -5,7 +5,7 @@ const app = express();
 const fs = require('fs');
 const { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } = require("constants");
 
-const PORT = 7095;
+const PORT = process.env.PORT || 7095;
 
 //========= Sets up the Express app to handle data parsing========
 app.use(express.urlencoded({ extended: true }));
